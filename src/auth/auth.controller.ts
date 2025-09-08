@@ -31,11 +31,18 @@ export const AuthController = new Elysia({ prefix: "/auth" })
   )
   .get("/me", async ({ jwt, set, headers }) => {
     const authHeader = headers["authorization"];
-    if (!authHeader) throw new Error("No token");
+    if (!authHeader) {
+      set.status = 401;
+      return "Authorization header not found"
+    }
 
-    const token = authHeader.split(" ") [1]
+    const token = authHeader.split(" ")[1];
 
     const payLoad = await jwt.verify(token);
-    set.status = "OK";
-    return payLoad;
+    if (!payLoad) {
+      set.status = 401;
+      return "Invalid token"
+    }
+    set.status = 200
+    return payLoad
   });
