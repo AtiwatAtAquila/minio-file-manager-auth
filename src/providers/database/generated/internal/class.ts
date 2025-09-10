@@ -22,7 +22,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "C:\\Users\\D3C3M\\Desktop\\minio-file-manager-auth\\src\\providers\\database\\generated",
+      "value": "/Volumes/HadesGodBlue/aqs/2025/minio-file-manager-auth/src/providers/database/generated",
       "fromEnvVar": null
     },
     "config": {
@@ -31,17 +31,17 @@ const config: runtime.GetPrismaClientConfig = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "darwin-arm64",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\D3C3M\\Desktop\\minio-file-manager-auth\\prisma\\schema.prisma",
+    "sourceFilePath": "/Volumes/HadesGodBlue/aqs/2025/minio-file-manager-auth/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../../../prisma",
-  "clientVersion": "6.15.0",
-  "engineVersion": "85179d7826409ee107a6ba334b5e305ae3fba9fb",
+  "clientVersion": "6.16.0",
+  "engineVersion": "1c57fdcd7e44b29b9313256c76699e91c3ac3c43",
   "datasourceNames": [
     "db"
   ],

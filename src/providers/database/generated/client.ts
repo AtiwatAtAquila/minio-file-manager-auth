@@ -4,7 +4,8 @@
 // @ts-nocheck 
 /*
  * This file should be your main import to use Prisma. Through it you get access to all the models, enums, and input types.
- *
+ * If you're looking for something you can import in the client-side of your application, please refer to the `browser.ts` file instead.
+ * 
  * 🟢 You can import this file directly.
  */
 
@@ -19,6 +20,7 @@ import * as $Class from "./internal/class.js"
 import * as Prisma from "./internal/prismaNamespace.js"
 
 export * as $Enums from './enums.js'
+export * from "./enums.js"
 /**
  * ## Prisma Client
  * 
@@ -38,13 +40,11 @@ export { Prisma }
 
 
 // file annotations for bundling tools to include these files
-path.join(__dirname, "query_engine-windows.dll.node")
-path.join(process.cwd(), "src/providers/database/generated/query_engine-windows.dll.node")
+path.join(__dirname, "libquery_engine-darwin-arm64.dylib.node")
+path.join(process.cwd(), "src/providers/database/generated/libquery_engine-darwin-arm64.dylib.node")
 
 /**
  * Model User
  * 
  */
 export type User = Prisma.UserModel
-
-
