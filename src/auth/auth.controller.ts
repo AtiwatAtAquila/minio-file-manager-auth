@@ -38,11 +38,18 @@ export const AuthController = new Elysia({ prefix: "/auth" })
 
     const token = authHeader.split(" ")[1];
 
-    const payLoad = await jwt.verify(token);
+    const payLoad: {
+      username: string
+      "exp": number,
+      "iat": number
+    } = await jwt.verify(token);
+
     if (!payLoad) {
       set.status = 401;
       return "Invalid token"
     }
+
     set.status = 200
+    set.headers["x-username"] = payLoad.username
     return payLoad
   });
